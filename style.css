@@ -1,0 +1,413 @@
+body {
+  background-color: #080b0c;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+}
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgb(0, 0, 0)),
+    url(img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* navbar start */
+.navbar {
+  padding: 10px 0px;
+  position: fixed;
+  width: 100%;
+  background-color: blueviolet;
+  z-index: 99;
+}
+.navbar .box-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-bar {
+  display: none;
+}
+.navbar .navbar-wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.navbar-wrapper a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.logo h1 {
+  font-size: 25px;
+  color: white;
+}
+.navbar-wrapper .active {
+  background-color: #0050b3;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+.navbar.scroll-active {
+  padding: 10px 0px;
+  background-color: #024699;
+}
+
+/* hover */
+.navbar-wrapper a:hover {
+  color: rgb(216, 103, 103);
+}
+/* hover */
+
+/* navbar end */
+
+/* hero start */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero .box-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1fr);
+  place-items: center;
+  column-gap: 40px;
+  padding-top: 50px;
+}
+.hero img {
+  width: 100%;
+}
+.box-hero .box:nth-child(1) h1 {
+  color: white;
+  font-size: 3vw;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.box-hero .box:nth-child(1) p {
+  line-height: 2;
+  color: white;
+  font-weight: 200;
+  margin-bottom: 20px;
+  --animate-delay: 0.5s;
+}
+.box-hero .box:nth-child(1) button {
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0050b3;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+/* hover */
+.box-hero .box:nth-child(1) button:hover {
+  background-color: #084999;
+}
+/* hover */
+/* hero end */
+
+/* service start */
+.service {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.service .box-service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+
+.service .box {
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+.service .box p {
+  font-size: 14px;
+  font-weight: 100;
+}
+.service .box h4 {
+  font-size: 20px;
+}
+.service .box i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #0050b3;
+}
+/* service end */
+
+/* pantais\ start */
+.pantai {
+  padding: 50px 0px;
+}
+.pantai .box-pantai {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.pantai img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.pantai .box {
+  text-align: center;
+  color: white;
+}
+.pantai .box p {
+  font-weight: 200;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.pantai .box button {
+  background-color: #0050b3;
+  width: 90px;
+  height: 40px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+/* hover */
+.pantai .box button:hover {
+  background-color: #024699;
+}
+.pantai .box-pantai .box:hover {
+  transform: translateY(-20px);
+}
+/* hover */
+/* pantais\ end */
+/* daftar start*/
+.daftar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 100px 0px;
+  text-align: center;
+}
+.daftar .box-daftar {
+  color: white;
+}
+.daftar h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.daftar h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  animation: animasi 2s infinite;
+}
+.daftar button {
+  background-color: #0050b3;
+  width: 120px;
+  height: 40px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.daftar button i{
+  font-size: 16px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+@keyframes animasi {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
+/* hover */
+.daftar button:hover{
+  background-color: #024699;
+}
+/* hover */
+/* daftar end */
+
+/* footer start */
+.footer{
+  padding: 50px 0px;
+  background-color: #0050b3;
+}
+.footer .box-footer{
+  display: grid;
+  grid-template-columns: 2fr auto 2fr;
+  gap: 50px;
+  align-items: center;
+}
+.footer .box{
+  color: white;
+}
+.footer .box:nth-child(1) p{
+  font-weight: 200;
+  margin-top: 10px;
+}
+.footer .box:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: center;
+}
+.footer .box-footer .box a{
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+.footer .box:nth-child(3) span{
+  font-weight: bold;
+}
+.footer .box:nth-child(3){
+  text-align: center;
+}
+.footer .box:nth-child(3) p{
+  font-weight: 200;
+}
+
+/* hover */
+.footer .box:nth-child(2) a:hover{
+  color: rgb(153, 153, 153)
+}
+/* hover */
+/* footer end */
+
+/* resonsive */
+@media screen and (max-width: 1124px) {
+  .service .box-service {
+    padding: 100px 0px 50px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .menu-bar {
+    display: block;
+    font-size: 40px;
+    color: white;
+  }
+  .navbar .navbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    row-gap: 40px;
+    top: 60px;
+    right: 50%;
+    padding-top: 20px;
+    transform: translateX(50%);
+    background-color: #0050b3;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    border-top: 2px solid white;
+  }
+  .navbar .menu-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .hero .box-hero {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 40px;
+    padding-top: 50px;
+    text-align: center;
+  }
+  .box-hero .box:nth-child(1) h1 {
+    color: white;
+    font-size: 25px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .box-hero .box:nth-child(1) p {
+    line-height: 1.1;
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .box-hero .box:nth-child(1) {
+    order: 2;
+  }
+
+  .box-hero .box:nth-child(1) button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0050b3;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  /* pantai */
+  .pantai .box-pantai {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  /* pantai */
+
+  /* daftar */
+  .daftar h1{
+    font-size: 20px;
+  }
+  .daftar h3{
+    font-size: 16px;
+  }
+  .daftar button{
+    font-size: 10px;
+  }
+  .daftar .btn{
+    gap: 10px;
+  }
+  /* daftar */
+  /* footer */
+  .footer .box-footer{
+    grid-template-columns: 1fr;
+  }
+  .footer .box:nth-child(2){
+    text-align: left;
+  }
+  /* footer */
+}
+/* resonsive */
